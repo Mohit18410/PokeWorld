@@ -5,19 +5,23 @@ import { FaRegUserCircle } from "react-icons/fa";
 import "./header.css";
 export const Header = () => {
   return (
-    <div className="header-container overflow-x-hidden py-1 px-12">
+    <div className="header-container py-1 lg:px-12 md:px-7 sm:px-6 px-5">
       <div className="flex justify-between items-center">
-        <Link>
-          <img src={imgPath} alt="Not Found" className=" w-20" />
-        </Link>
-        <div className="flex justify-between items-center w-1/4 text-lg">
-          <NavLink className=" text-white">Home</NavLink>
-          <NavLink className=" text-white">Explore PokeWorld</NavLink>
-          <NavLink className=" text-white">Contact Us</NavLink>
-          <FaRegUserCircle
-            size={26}
-            className=" fill-white hover:cursor-pointer"
-          />
+        <div className=" w-20">
+          <Link>
+            <img src={imgPath} alt="Not Found" className=" w-full" />
+          </Link>
+        </div>
+        <div className="flex justify-between items-center w-auto gap-2 sm:gap-4 2xl:text-xl xl:text-lg md:text-md">
+          <NavLink className="links">Home</NavLink>
+          <NavLink className="links">Explore PokeWorld</NavLink>
+          <NavLink className="links">Contact Us</NavLink>
+          <div className=" w-6 flex justify-center">
+            <FaRegUserCircle
+              size={"1.5em"}
+              className="sign-icon fill-white hover:cursor-pointer"
+            />
+          </div>
         </div>
       </div>
     </div>

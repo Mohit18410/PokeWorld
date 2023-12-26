@@ -1,3 +1,17 @@
 .header-container {
   background-color: rgb(193, 18, 31);
 }
+
+.links {
+  color: #fafafa;
+  transition: all 0.3s ease;
+}
+
+.links:hover {
+  text-decoration: underline;
+  color: #f7b538;
+}
+
+.sign-icon:hover {
+  fill: #f7b538;
+}
