@@ -1,6 +1,6 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
+import Home from "./components/home/Home";
 import { Header } from "./components/Header";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-          <Route index element={<Home />} />
+        <Route index element={<Home />} />
       </Routes>
     </div>
   );
