@@ -3,6 +3,8 @@ import SiteDescription from "./SiteDescription";
 import Release from "./Release";
 import Explore from "./Explore";
 import TopUsers from "./TopUsers";
+import SignLogin from "./SignLogin";
+
 function Home() {
   return (
     <div className=" overflow-x-hidden">
@@ -10,6 +12,7 @@ function Home() {
       <Release />
       <Explore />
       <TopUsers />
+      <SignLogin />
     </div>
   );
 }
