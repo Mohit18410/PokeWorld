@@ -3,8 +3,16 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./components/home/Home";
 import { Header } from "./components/Header";
 import Footer from "./components/footer/Footer";
+import { useContext, useEffect } from "react";
+import { AppContext } from "./context/AppContext";
 
 function App() {
+  const { getPokemonData } = useContext(AppContext);
+
+  useEffect(() => {
+    getPokemonData();
+  }, []);
+
   return (
     <div className="App h-screen">
       <Header />
