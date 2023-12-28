@@ -9,7 +9,7 @@ export default function AppContextProvider({ children }) {
     try {
       const res = await fetch("http://localhost:3001/pokeData");
       const data = await res.json();
-      console.log(data);
+      setPokemonData(data);
     } catch (error) {
       console.log("Error in getting data");
     }
