@@ -17,12 +17,12 @@ const WeekPokemon = () => {
 
   return (
     <div className="mx-8 my-4">
-      <div className="text-3xl mb-4">This Week Pokemon :</div>
-      <div className=" border-black border-4">
+      <div className="text-3xl mb-12 lg:ml-10">This Week Pokemon :</div>
+      <div className="flex-horizontal">
         {pokemonData.length === 300 ? (
           <WeekPokemonData pokemon={pokemonData[todayPokemon]} />
         ) : (
-          <div className="flex justify-center items-center w-full h-full py-12">
+          <div className=" shadow rounded-xl flex-horizontal-vertical w-2/6 h-full py-12">
             <Spinner />
           </div>
         )}

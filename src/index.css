@@ -60,3 +60,32 @@ body > * {
     transform: rotate(1turn);
   }
 }
+
+.flex-horizontal-vertical {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-vertical {
+  display: flex;
+  align-items: center;
+}
+
+.flex-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+.pokeimage {
+  filter: drop-shadow(8px 8px 10px rgb(101, 101, 101));
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  transition: all 0.3s ease;
+}
+
+.shadow:hover {
+  transform: scale(1.15);
+}

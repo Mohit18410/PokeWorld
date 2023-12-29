@@ -12,37 +12,39 @@ const WeekPokemonData = ({ pokemon }) => {
   }
   abilitiesArray(abilities);
 
-  const textStyleClass = "text-2xl mb-2";
+  const textStyleClass = " text-lg lg:text-2xl sm:text-xl mb-2";
 
   return (
-    <div className=" my-11 flex justify-center items-center">
-      <div>
+    <div className=" week-Pokemon-tab mt-4 rounded-xl w-3/4 p-14 flex-vertical justify-around shadow">
+      <div className="pokeimage min-w-max">
         <img src={sprite} alt="Not Found" />
       </div>
       <div>
         <div>
-          <div className="text-5xl mb-4">{name}</div>
+          <div className=" text-3xl lg:text-5xl sm:text-4xl text-center mb-4">
+            {name}
+          </div>
           <div className={textStyleClass}>Species: {species}</div>
-          <div className="text-2xl mb-2 flex items-center">
+          <div className="text-lg lg:text-2xl sm:text-xl mb-2 flex-vertical">
             <div>Type :</div>
             <div>
               <DataTab element={types} />
             </div>
           </div>
-          <div className="text-2xl mb-2 flex items-center">
+          <div className="text-lg lg:text-2xl sm:text-xl mb-2 flex-vertical">
             <div>Abilities:</div>
             <div>
               <DataTab element={abilityArray} />
             </div>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="flex-vertical justify-between">
             <div className={textStyleClass}>HP: {hp}</div>
             <div className={textStyleClass}>Attack: {attack}</div>
             <div className={textStyleClass}>Defense: {defense}</div>
           </div>
         </div>
-        <div className="flex items-center">
-          <button className=" border-4 border-black rounded-lg mr-3 p-2">
+        <div className="flex-vertical">
+          <button className=" border-4 border-black rounded-lg mr-3 lg:p-2 p-1">
             Add To Collection
           </button>
           <button>

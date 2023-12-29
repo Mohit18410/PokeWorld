@@ -3,3 +3,9 @@
     max-width: 50%;
   }
 }
+
+@media (max-width: 850px) {
+  .week-Pokemon-tab {
+    flex-direction: column;
+  }
+}
