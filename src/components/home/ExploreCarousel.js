@@ -1,53 +1,75 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/skyblue";
-import imgPath from "../../Image/Img1.png";
-import imgPath2 from "../../Image/bulbasaur.png";
+import Spinner from "../Spinner";
+import "./home.css";
+import "./explore.css";
 
-const ExploreCarousel = () => {
+const ExploreCarousel = ({ pokemons }) => {
+  const [carouselPokemon, setCarouselPokemon] = useState([]);
+
+  useEffect(() => {
+    if (pokemons.length === 300) {
+      const randomPokemons = [];
+      for (let i = 0; i < 30; i++) {
+        const randomIndex = Math.floor(Math.random() * 300);
+
+        if (!randomPokemons.includes(pokemons[randomIndex]))
+          randomPokemons.push(pokemons[randomIndex]);
+      }
+
+      setCarouselPokemon(randomPokemons);
+    }
+  }, [pokemons]);
+
   return (
-    <Splide
-      options={{
-        type: "loop",
-        perPage: 3,
-        focus: "center",
-        gap: "0.4em",
-        autoplay: true,
-        width: "80vw",
-        height: "30vw",
-        pagination: false,
-        drag: "free",
-        pauseOnHover: true,
-        lazyLoad: "nearby",
-      }}
-      aria-label="Images"
-    >
-      <SplideSlide>
-        <div className=" border-2 border-black">
-          <img src={imgPath} alt="Not found" />
-        </div>
-      </SplideSlide>
-      <SplideSlide>
-        <div className=" border-2 border-black">
-          <img src={imgPath2} alt="Not found" />
-        </div>
-      </SplideSlide>
-      <SplideSlide>
-        <div className=" border-2 border-black">
-          <img src={imgPath} alt="Not found" />
-        </div>
-      </SplideSlide>
-      <SplideSlide>
-        <div className=" border-2 border-black">
-          <img src={imgPath2} alt="Not found" />
-        </div>
-      </SplideSlide>
-      <SplideSlide>
-        <div className=" border-2 border-black">
-          <img src={imgPath} alt="Not found" />
-        </div>
-      </SplideSlide>
-    </Splide>
+    <div>
+      {carouselPokemon.length >= 10 ? (
+        <Splide
+          options={{
+            type: "loop",
+            perPage: 3,
+            focus: "center",
+            gap: "5em",
+            autoplay: true,
+            width: "90vw",
+            height: "45vw",
+            drag: false,
+            pagination: false,
+            pauseOnHover: true,
+            lazyLoad: "nearby",
+          }}
+          aria-label="Images"
+        >
+          {carouselPokemon.map((ele, index) => {
+            return (
+              <SplideSlide className=" border-2 border-black flex-horizontal-vertical">
+                <div className="pokedex-container py-24 w-full rounded-xl">
+                  <div className="flex-horizontal-vertical flex-col">
+                    <div className="pokedex-image flex-horizontal-vertical bg-neutral-900 max-h-min w-11/12">
+                      <img src={ele.sprite} alt="Not found" />
+                    </div>
+                    <div className="poke-details xl:mt-12 mt-8">
+                      <div className="poke-name rounded-md">{ele.name}</div>
+                      <div className="poke-ability flex-horizontal-vertical flex-col rounded-md">
+                        {ele.abilities.map((ability) => {
+                          return <div>{ability.name} </div>;
+                        })}
+                      </div>
+                      <div className="poke-species rounded-md">
+                        {ele.species}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SplideSlide>
+            );
+          })}
+        </Splide>
+      ) : (
+        <Spinner />
+      )}
+    </div>
   );
 };
 

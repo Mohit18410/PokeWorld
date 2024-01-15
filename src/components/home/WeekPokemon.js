@@ -17,7 +17,7 @@ const WeekPokemon = () => {
 
   return (
     <div className="mx-8 my-4">
-      <div className="text-3xl mb-12 lg:ml-10">This Week Pokemon</div>
+      <div className="text-3xl mb-12 lg:ml-10">Today's Pokemon</div>
       <div className="flex-horizontal">
         {pokemonData.length === 300 ? (
           <WeekPokemonData pokemon={pokemonData[todayPokemon]} />
