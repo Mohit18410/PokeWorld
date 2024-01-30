@@ -13,7 +13,7 @@ const Explore = () => {
         {pokemonData.length === 300 ? (
           <ExploreCarousel pokemons={pokemonData} />
         ) : (
-          <div className="rounded-xl flex-horizontal-vertical w-2/6 h-full py-12">
+          <div className="rounded-xl border-4 flex-horizontal-vertical w-2/6 h-full py-12">
             <Spinner />
           </div>
         )}
