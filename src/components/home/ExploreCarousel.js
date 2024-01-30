@@ -41,7 +41,7 @@ const ExploreCarousel = ({ pokemons }) => {
           }}
           aria-label="Images"
         >
-          {carouselPokemon.map((ele, index) => {
+          {carouselPokemon.map((ele) => {
             return (
               <SplideSlide className=" border-2 border-black flex-horizontal-vertical">
                 <div className="pokedex-container py-24 w-full rounded-xl">

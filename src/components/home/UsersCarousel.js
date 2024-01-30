@@ -20,9 +20,12 @@ const UsersCarousel = ({ users }) => {
         }}
         aria-label="Images"
       >
-        {users.map((user) => {
+        {users.map((user, index) => {
           return (
-            <SplideSlide className="  flex-horizontal-vertical border-4 border-slate-800 rounded-xl">
+            <SplideSlide
+              key={index}
+              className="  flex-horizontal-vertical border-4 border-slate-800 rounded-xl"
+            >
               <div className=" w-full">
                 <div className=" w-full flex-horizontal-vertical md:flex-row flex-col gap-20">
                   <div className=" w-2/5 flex-horizontal-vertical">
