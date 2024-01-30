@@ -10,7 +10,7 @@ const UsersCarousel = ({ users }) => {
         options={{
           type: "loop",
           perPage: 1,
-          autoplay: false,
+          autoplay: true,
           width: "100vw",
           height: "30vw",
           pagination: false,
