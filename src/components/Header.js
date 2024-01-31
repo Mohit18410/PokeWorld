@@ -13,8 +13,12 @@ export const Header = () => {
           </Link>
         </div>
         <div className="flex justify-between items-center w-auto gap-2 sm:gap-4 2xl:text-xl xl:text-lg md:text-md">
-          <NavLink className="links">Home</NavLink>
-          <NavLink className="links">Explore PokeWorld</NavLink>
+          <NavLink to="/" className="links">
+            Home
+          </NavLink>
+          <NavLink to="/explorePokeworld" className="links">
+            Explore PokeWorld
+          </NavLink>
           <NavLink className="links">Contact Us</NavLink>
           <div className=" w-6 flex justify-center">
             <FaRegUserCircle

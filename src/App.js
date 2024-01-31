@@ -1,6 +1,7 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/home/Home";
+import ExplorePokeworld from "./components/explorePokeworld/ExplorePokeworld";
 import { Header } from "./components/Header";
 import Footer from "./components/footer/Footer";
 import { useContext, useEffect } from "react";
@@ -18,6 +19,7 @@ function App() {
       <Header />
       <Routes>
         <Route index element={<Home />} />
+        <Route path="/explorePokeworld" element={<ExplorePokeworld />} />
       </Routes>
       <Footer />
     </div>

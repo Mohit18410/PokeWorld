@@ -10,8 +10,12 @@ const LeftPart = () => {
       <div className="footerlinkbox">
         <div className="text-3xl">PokeWorld</div>
         <div className="flex flex-col text-lg footerlinkgroup">
-          <NavLink className="footerlinks">Home</NavLink>
-          <NavLink className="footerlinks">Explore The PokeWorld</NavLink>
+          <NavLink to="/" className="footerlinks">
+            Home
+          </NavLink>
+          <NavLink to="/explorePokeworld" className="footerlinks">
+            Explore The PokeWorld
+          </NavLink>
           <NavLink className="footerlinks">Contact Us</NavLink>
           <NavLink className="footerlinks">Pokemon.com</NavLink>
         </div>
