@@ -15,7 +15,7 @@ const WeekPokemonData = ({ pokemon }) => {
   const textStyleClass = " text-lg lg:text-2xl sm:text-xl mb-2";
 
   return (
-    <div className=" week-Pokemon-tab mt-4 rounded-xl w-3/4 p-14 flex-vertical justify-around shadow">
+    <div className=" rounded-xl p-14 flex-vertical justify-around shadow bg-white">
       <div className="pokeimage min-w-max">
         <img src={sprite} alt="Not Found" />
       </div>

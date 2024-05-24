@@ -5,7 +5,7 @@ const ClickedPokemonSlice = createSlice({
   initialState: {},
   reducers: {
     setPokemonClicked: (state, action) => {
-      Object.assign(state, action.payload);
+      return action.payload;
     },
   },
 });
