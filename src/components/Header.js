@@ -12,7 +12,7 @@ export const Header = () => {
             <img src={imgPath} alt="Not Found" className=" w-full" />
           </Link>
         </div>
-        <div className="flex justify-between items-center w-auto gap-2 sm:gap-4 2xl:text-xl xl:text-lg md:text-md">
+        <div className="flex justify-between items-center text-center w-auto gap-1 sm:gap-4 2xl:text-xl xl:text-lg md:text-md">
           <NavLink to="/" className="links">
             Home
           </NavLink>
