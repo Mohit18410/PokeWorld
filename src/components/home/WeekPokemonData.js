@@ -1,6 +1,7 @@
 import React from "react";
 import { FaHeart } from "react-icons/fa";
 import DataTab from "./DataTab";
+import Button from "@mui/material/Button";
 
 const WeekPokemonData = ({ pokemon }) => {
   const { name, species, sprite, types, abilities, baseStats } = pokemon;
@@ -43,16 +44,13 @@ const WeekPokemonData = ({ pokemon }) => {
             <div className={textStyleClass}>Defense: {defense}</div>
           </div>
         </div>
-        <div className="flex-vertical">
-          <button className=" border-4 border-black rounded-lg mr-3 lg:p-2 p-1">
+        <div className="flex-vertical gap-5">
+          <Button variant="contained" color="success" className=" h-10">
             Add To Collection
-          </button>
-          <button>
-            <FaHeart
-              size={34}
-              className=" fill-red-600 border-2 border-black rounded-sm p-1"
-            />
-          </button>
+          </Button>
+          <Button variant="outlined" color="error" className=" h-10 w-8">
+            <FaHeart size={34} className=" fill-red-600" />
+          </Button>
         </div>
       </div>
     </div>
