@@ -7,6 +7,7 @@ import "./explore.css";
 
 const ExploreCarousel = ({ pokemons }) => {
   const [carouselPokemon, setCarouselPokemon] = useState([]);
+  // const numberOfCards = window.innerWidth > 1280 ? 3 : 2;
 
   useEffect(() => {
     if (pokemons.length === 300) {
@@ -28,12 +29,12 @@ const ExploreCarousel = ({ pokemons }) => {
         <Splide
           options={{
             type: "loop",
-            perPage: 3,
+            perPage:
+              window.innerWidth >= 1024 ? 3 : window.innerWidth >= 700 ? 2 : 1,
             focus: "center",
             gap: "5em",
             autoplay: true,
             width: "90vw",
-            height: "45vw",
             drag: false,
             pagination: false,
             pauseOnHover: true,
@@ -43,10 +44,10 @@ const ExploreCarousel = ({ pokemons }) => {
         >
           {carouselPokemon.map((ele, index) => {
             return (
-              <SplideSlide className=" border-2 border-black flex-horizontal-vertical">
-                <div className="pokedex-container py-24 w-full rounded-xl">
+              <SplideSlide className=" flex-horizontal-vertical py-5">
+                <div className="pokedex-container flex-horizontal-vertical p-3 w-full max-w-xs min-w-fit rounded-3xl">
                   <div className="flex-horizontal-vertical flex-col">
-                    <div className="pokedex-image flex-horizontal-vertical bg-neutral-900 max-h-min w-11/12">
+                    <div className="pokedex-image flex-horizontal-vertical bg-neutral-900 w-max max-h-max ">
                       <img src={ele.sprite} alt="Not found" />
                     </div>
                     <div className="poke-details xl:mt-12 mt-8">

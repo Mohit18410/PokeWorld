@@ -1,5 +1,6 @@
 .pokedex-container {
   background-color: rgb(179, 14, 22);
+  height: 485px;
 }
 
 .poke-details {
@@ -14,14 +15,14 @@
 
 .poke-name {
   padding: 0.3em 0.6em;
-  background-color: #030637;
+  background-color: rgb(3, 6, 55);
   align-self: center;
   justify-self: center;
 }
 
 .poke-ability {
   padding: 0.3em 0.6em;
-  background-color: rgb(0, 152, 0);
+  background-color: rgb(220, 95, 0);
   grid-column: 2/3;
   grid-row: 1/3;
   align-self: stretch;
@@ -29,17 +30,13 @@
 
 .poke-species {
   padding: 0.3em 0.6em;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   align-self: center;
   justify-self: center;
 }
 
 .extra-button {
-  color: rgb(255, 255, 255);
-  background: #5a5454;
-  background: -moz-linear-gradient(to right, #5a5454 0%, #333333 100%);
-  background: -webkit-linear-gradient(to right, #5a5454 0%, #333333 100%);
-  background: linear-gradient(to right, #5a5454 0%, #333333 100%);
+  color: #252525;
 }
 
 @media (max-width: 1200px) {
@@ -53,3 +50,16 @@
     grid-row: 3/4;
   }
 }
+
+/* 
+const theme = createTheme({
+  palette: {
+    ochre: {
+      main: '#494444',
+      light: '#5d5959',
+      dark: '#2a2727',
+      contrastText: '##4e4c4c',
+    },
+  },
+});
+ */

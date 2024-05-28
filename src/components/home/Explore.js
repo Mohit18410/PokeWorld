@@ -3,13 +3,25 @@ import ExploreCarousel from "./ExploreCarousel";
 import { AppContext } from "../../context/AppContext";
 import Spinner from "../Spinner";
 import { FaArrowRight } from "react-icons/fa";
+import { Button } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const Explore = () => {
+  const theme = createTheme({
+    palette: {
+      ochre: {
+        main: "#252525",
+        light: "#5d5959",
+        dark: "#000000",
+        contrastText: "#ffffff",
+      },
+    },
+  });
   const { pokemonData } = useContext(AppContext);
   return (
     <div className=" my-32 mx-6">
-      <div className=" mb-10 text-3xl lg:ml-14">Explore</div>
-      <div className=" flex-horizontal mb-14">
+      <div className=" mb-5 text-3xl lg:ml-14">Explore</div>
+      <div className=" flex-horizontal mb-5">
         {pokemonData.length === 300 ? (
           <ExploreCarousel pokemons={pokemonData} />
         ) : (
@@ -19,10 +31,12 @@ const Explore = () => {
         )}
       </div>
       <div className=" flex flex-row-reverse">
-        <button className="extra-button bg-slate-600 py-3 px-6 flex-vertical rounded-2xl">
-          Extra
-          <FaArrowRight />
-        </button>
+        <ThemeProvider theme={theme}>
+          <Button variant="contained" color="ochre">
+            Extra
+            <FaArrowRight />
+          </Button>
+        </ThemeProvider>
       </div>
     </div>
   );
