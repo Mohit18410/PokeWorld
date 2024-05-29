@@ -19,7 +19,7 @@ const Explore = () => {
   });
   const { pokemonData } = useContext(AppContext);
   return (
-    <div className=" my-32 mx-6">
+    <div className=" my-24 mx-6">
       <div className=" mb-5 text-3xl lg:ml-14">Explore</div>
       <div className=" flex-horizontal mb-5">
         {pokemonData.length === 300 ? (

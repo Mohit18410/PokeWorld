@@ -25,7 +25,7 @@ let userData = [
 
 const TopUsers = () => {
   return (
-    <div className=" my-20 mx-6">
+    <div className=" mb-10 mx-6">
       <div className=" mb-10 text-3xl lg:ml-14">Top Users</div>
       <div className="flex-horizontal">
         {userData ? (
