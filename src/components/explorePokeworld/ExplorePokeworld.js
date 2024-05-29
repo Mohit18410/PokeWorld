@@ -5,17 +5,8 @@ import Spinner from "../Spinner";
 import { useDispatch, useSelector } from "react-redux";
 import { setPokemonClicked } from "../../redux/slices/ClickedPokemonSlice";
 import Modal from "@mui/material/Modal";
-import WeekPokemonData from "../home/WeekPokemonData";
-
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-};
+import PokeModalWindow from "./PokeModalWindow";
+import { AiOutlineClose } from "react-icons/ai";
 
 const ExplorePokeworld = () => {
   const dispatch = useDispatch();
@@ -48,8 +39,13 @@ const ExplorePokeworld = () => {
         aria-describedby="modal-modal-description"
       >
         <div className=" absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4">
+          <AiOutlineClose
+            size={20}
+            className=" absolute top-2 right-2 fill-gray-400 hover:cursor-pointer"
+            onClick={handleClose}
+          />
           {Object.keys(clickedPokemonData).length ? (
-            <WeekPokemonData pokemon={clickedPokemonData} />
+            <PokeModalWindow pokemon={clickedPokemonData} />
           ) : (
             <div>No Data</div>
           )}
