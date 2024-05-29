@@ -16,7 +16,7 @@ const WeekPokemonData = ({ pokemon }) => {
   const textStyleClass = " text-lg lg:text-2xl sm:text-xl mb-2";
 
   return (
-    <div className=" rounded-xl p-14 flex-vertical justify-around shadow bg-white">
+    <div className=" today-poke-card rounded-xl p-10 lg:p-14 flex-horizontal-vertical flex-wrap shadow bg-white">
       <div className="pokeimage min-w-max">
         <img src={sprite} alt="Not Found" />
       </div>
@@ -32,7 +32,7 @@ const WeekPokemonData = ({ pokemon }) => {
               <DataTab element={types} />
             </div>
           </div>
-          <div className="text-lg lg:text-2xl sm:text-xl mb-2 flex-vertical">
+          <div className=" text-lg lg:text-2xl sm:text-xl mb-2 flex-vertical">
             <div>Abilities:</div>
             <div>
               <DataTab element={abilityArray} />

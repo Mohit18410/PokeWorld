@@ -20,7 +20,7 @@ const WeekPokemon = () => {
       <div className="text-3xl mb-12 lg:ml-10">Today's Pokemon</div>
       <div className="flex-horizontal">
         {pokemonData.length === 300 ? (
-          <div className=" mt-4 w-3/4">
+          <div className=" mt-4">
             <WeekPokemonData pokemon={pokemonData[todayPokemon]} />
           </div>
         ) : (

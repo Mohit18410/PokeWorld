@@ -89,3 +89,15 @@ body > * {
 .shadow:hover {
   transform: scale(1.15);
 }
+
+@media (max-width: 900px) {
+  .shadow:hover {
+    transform: scale(1.06);
+  }
+}
+
+@media (max-width: 450px) {
+  .tdy-poke-ablty {
+    align-items: start;
+  }
+}

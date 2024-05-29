@@ -50,16 +50,3 @@
     grid-row: 3/4;
   }
 }
-
-/* 
-const theme = createTheme({
-  palette: {
-    ochre: {
-      main: '#494444',
-      light: '#5d5959',
-      dark: '#2a2727',
-      contrastText: '##4e4c4c',
-    },
-  },
-});
- */

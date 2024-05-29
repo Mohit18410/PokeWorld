@@ -2,7 +2,7 @@ import React from "react";
 
 const DataTab = ({ element }) => {
   return (
-    <div className=" flex-horizontal">
+    <div className=" flex-horizontal flex-wrap">
       {element.map((value, index) => {
         const backgroundColor = index % 2 === 0 ? "black" : "red";
         return (
