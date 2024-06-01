@@ -90,6 +90,11 @@ body > * {
   transform: scale(1.15);
 }
 
+.contact-image {
+  min-width: 300px;
+  min-height: 300px;
+}
+
 @media (max-width: 900px) {
   .shadow:hover {
     transform: scale(1.06);

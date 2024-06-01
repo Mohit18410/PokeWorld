@@ -19,7 +19,9 @@ export const Header = () => {
           <NavLink to="/explorePokeworld" className="links">
             Explore PokeWorld
           </NavLink>
-          <NavLink className="links">Contact Us</NavLink>
+          <NavLink to="contact" className="links">
+            Contact Us
+          </NavLink>
           <div className=" w-6 flex justify-center">
             <FaRegUserCircle
               size={"1.5em"}

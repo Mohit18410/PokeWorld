@@ -6,6 +6,7 @@ import { Header } from "./components/Header";
 import Footer from "./components/footer/Footer";
 import { useContext, useEffect } from "react";
 import { AppContext } from "./context/AppContext";
+import Contact from "./components/contact/Contact";
 
 function App() {
   const { getPokemonData } = useContext(AppContext);
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path="/explorePokeworld" element={<ExplorePokeworld />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </div>
