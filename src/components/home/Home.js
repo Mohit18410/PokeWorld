@@ -7,7 +7,7 @@ import SignLogin from "./SignLogin";
 
 function Home() {
   return (
-    <div className=" overflow-x-hidden">
+    <div>
       <SiteDescription />
       <WeekPokemon />
       <Explore />
