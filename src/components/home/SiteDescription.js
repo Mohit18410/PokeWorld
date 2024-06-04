@@ -4,8 +4,8 @@ import "./home.css";
 
 const SiteDescription = () => {
   return (
-    <div className=" my-20 flex md:flex-row flex-col-reverse justify-center items-center lg:gap-32 md:gap-8">
-      <div className=" site-moto md:text-left text-center  md:mt-0 mt-4">
+    <div className=" my-20 flex-horizontal-vertical flex-wrap-reverse lg:gap-32 md:gap-8">
+      <div className=" site-moto md:text-left text-center md:mt-0 mt-4">
         <div className="lg:text-5xl md:text-3xl text-2xl md:mb-2 mb-1">
           PokeWorld: Collect, Chat, Explore
         </div>
