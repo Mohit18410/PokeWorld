@@ -51,7 +51,7 @@ const ExplorePokeworld = () => {
           )}
         </div>
       </Modal>
-      <div className=" flex flex-wrap gap-3 justify-center">
+      <div className=" flex-horizontal flex-wrap gap-3">
         {pokemonData ? (
           pokemonData.map((pokemon, index) => {
             return <PokemonCard pokemon={pokemon} key={index} />;

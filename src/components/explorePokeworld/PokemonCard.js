@@ -10,7 +10,7 @@ const PokemonCard = ({ pokemon }) => {
       onClick={() => {
         dispatch(setPokemonClicked(pokemon));
       }}
-      className=" mt-8 p-2 flex flex-col items-center border-2 border-slate-950 hover:cursor-pointer"
+      className=" mt-8 p-2 flex-vertical flex-col border-2 border-slate-950 hover:cursor-pointer"
     >
       <div>
         <img src={pokemon.sprite} alt="Not Found" />
