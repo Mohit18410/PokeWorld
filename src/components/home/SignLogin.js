@@ -5,7 +5,7 @@ const buttonProperty =
 
 const SignLogin = () => {
   return (
-    <div className=" my-7 mx-7 flex justify-center items-center md:gap-12 sm:gap-10 gap-8">
+    <div className=" my-7 mx-7 flex-horizontal-vertical md:gap-12 sm:gap-10 gap-8">
       <button
         style={{
           backgroundColor: "rgb(0, 48, 73)",
