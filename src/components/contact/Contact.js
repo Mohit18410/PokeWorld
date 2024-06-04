@@ -44,7 +44,6 @@ const Contact = () => {
             label="Description"
             multiline
             rows={5}
-            maxRows={10}
             id="fullWidth"
           />
           <div className=" flex justify-end">
