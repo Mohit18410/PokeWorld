@@ -7,7 +7,6 @@ import "./explore.css";
 
 const ExploreCarousel = ({ pokemons }) => {
   const [carouselPokemon, setCarouselPokemon] = useState([]);
-  // const numberOfCards = window.innerWidth > 1280 ? 3 : 2;
 
   useEffect(() => {
     if (pokemons.length === 300) {
