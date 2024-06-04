@@ -43,7 +43,10 @@ const ExploreCarousel = ({ pokemons }) => {
         >
           {carouselPokemon.map((ele, index) => {
             return (
-              <SplideSlide className=" flex-horizontal-vertical py-5">
+              <SplideSlide
+                key={index}
+                className=" flex-horizontal-vertical py-5"
+              >
                 <div className="pokedex-container flex-horizontal-vertical p-3 w-full max-w-xs min-w-fit rounded-3xl">
                   <div className="flex-horizontal-vertical flex-col">
                     <div className="pokedex-image flex-horizontal-vertical bg-neutral-900 w-max max-h-max ">
@@ -53,7 +56,7 @@ const ExploreCarousel = ({ pokemons }) => {
                       <div className="poke-name rounded-md">{ele.name}</div>
                       <div className="poke-ability flex-horizontal-vertical flex-col rounded-md">
                         {ele.abilities.map((ability) => {
-                          return <div>{ability.name} </div>;
+                          return <div key={ability.name}>{ability.name} </div>;
                         })}
                       </div>
                       <div className="poke-species rounded-md">
