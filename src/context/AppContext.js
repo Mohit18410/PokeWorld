@@ -14,7 +14,6 @@ export default function AppContextProvider({ children }) {
         },
       });
       const data = await res.json();
-      console.log(data.data);
       setPokemonData(data.data);
     } catch (error) {
       console.log("Error in getting data");
