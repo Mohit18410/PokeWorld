@@ -1,23 +1,20 @@
 import { createContext, useState } from "react";
+import axios from "axios";
 
 export const AppContext = createContext();
 
 export default function AppContextProvider({ children }) {
   const [pokemonData, setPokemonData] = useState([]);
 
-  async function getPokemonData() {
-    try {
-      const res = await fetch("http://localhost:3001/data/v1/pokeData", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
+  function getPokemonData() {
+    axios
+      .get("http://localhost:3001/data/v1/pokeData")
+      .then((res) => {
+        setPokemonData(res.data.data);
+      })
+      .catch(() => {
+        console.log("Error in getting data");
       });
-      const data = await res.json();
-      setPokemonData(data.data);
-    } catch (error) {
-      console.log("Error in getting data");
-    }
   }
 
   const value = {
