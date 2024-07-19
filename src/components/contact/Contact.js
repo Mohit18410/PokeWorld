@@ -7,6 +7,8 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import "../footer/footer.css";
 import { toast, ToastContainer } from "react-toastify";
 import axios from "axios";
+import { Header } from "../Header";
+import Footer from "../footer/Footer";
 
 const Contact = () => {
   const [formDetails, setFormDetails] = useState({
@@ -50,7 +52,8 @@ const Contact = () => {
     e.preventDefault();
   };
   return (
-    <>
+    <div className=" h-screen">
+      <Header />
       <div className=" my-14 flex-horizontal items-center flex-wrap mx-3 lg:gap-20 xl:gap-28 md:gap-5 gap-3">
         <img
           src={imgSrc}
@@ -141,8 +144,9 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Footer />
       <ToastContainer />
-    </>
+    </div>
   );
 };
 

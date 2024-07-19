@@ -7,6 +7,8 @@ import { setPokemonClicked } from "../../redux/slices/ClickedPokemonSlice";
 import Modal from "@mui/material/Modal";
 import PokeModalWindow from "./PokeModalWindow";
 import { AiOutlineClose } from "react-icons/ai";
+import { Header } from "../Header";
+import Footer from "../footer/Footer";
 
 const ExplorePokeworld = () => {
   const dispatch = useDispatch();
@@ -31,7 +33,7 @@ const ExplorePokeworld = () => {
 
   const { pokemonData } = useContext(AppContext);
   return (
-    <div>
+    <div className=" h-screen">
       <Modal
         open={open}
         onClose={handleClose}
@@ -51,6 +53,7 @@ const ExplorePokeworld = () => {
           )}
         </div>
       </Modal>
+      <Header />
       <div className=" flex-horizontal flex-wrap gap-3">
         {pokemonData ? (
           pokemonData.map((pokemon, index) => {
@@ -60,6 +63,7 @@ const ExplorePokeworld = () => {
           <Spinner />
         )}
       </div>
+      <Footer />
     </div>
   );
 };
