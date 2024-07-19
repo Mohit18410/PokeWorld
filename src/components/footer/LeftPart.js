@@ -16,8 +16,12 @@ const LeftPart = () => {
           <NavLink to="/explorePokeworld" className="footerlinks">
             Explore The PokeWorld
           </NavLink>
-          <NavLink className="footerlinks">Contact Us</NavLink>
-          <NavLink className="footerlinks">Pokemon.com</NavLink>
+          <NavLink to="/contact" className="footerlinks">
+            Contact Us
+          </NavLink>
+          <NavLink to="https://www.pokemon.com/us" className="footerlinks">
+            Pokemon.com
+          </NavLink>
         </div>
       </div>
       <div className="flex-horizontal gap-2 mt-3 pt-3 border-t-2 w-2/4 footericongroup">
