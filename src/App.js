@@ -19,7 +19,7 @@ function App() {
   }, []);
 
   return (
-    <div className=" h-screen">
+    <>
       <ScrollToTop />
       <Header />
       <Routes>
@@ -30,7 +30,7 @@ function App() {
         <Route path="/signUp" element={<Sign />} />
       </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 
