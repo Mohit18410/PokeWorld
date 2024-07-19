@@ -22,12 +22,12 @@ export const Header = () => {
           <NavLink to="contact" className="links">
             Contact Us
           </NavLink>
-          <div className=" w-6 flex-horizontal">
+          <NavLink to="logIn" className=" w-6 flex-horizontal">
             <FaRegUserCircle
               size={"1.5em"}
               className="sign-icon fill-white hover:cursor-pointer"
             />
-          </div>
+          </NavLink>
         </div>
       </div>
     </div>

@@ -7,6 +7,8 @@ import Footer from "./components/footer/Footer";
 import { useContext, useEffect } from "react";
 import { AppContext } from "./context/AppContext";
 import Contact from "./components/contact/Contact";
+import Log from "./components/signlog/Log";
+import Sign from "./components/signlog/Sign";
 
 function App() {
   const { getPokemonData } = useContext(AppContext);
@@ -22,6 +24,8 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/explorePokeworld" element={<ExplorePokeworld />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/logIn" element={<Log />} />
+        <Route path="/signUp" element={<Sign />} />
       </Routes>
       <Footer />
     </div>
