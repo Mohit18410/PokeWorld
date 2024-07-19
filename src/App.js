@@ -9,6 +9,7 @@ import Log from "./components/signlog/Log";
 import Sign from "./components/signlog/Sign";
 import { Header } from "./components/Header";
 import Footer from "./components/footer/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const { getPokemonData } = useContext(AppContext);
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <div className=" h-screen">
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route index element={<Home />} />
