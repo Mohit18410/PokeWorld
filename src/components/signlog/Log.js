@@ -16,8 +16,6 @@ import IconButton from "@mui/material/IconButton";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import FormControl from "@mui/material/FormControl";
 import { NavLink } from "react-router-dom";
-import { Header } from "../Header";
-import Footer from "../footer/Footer";
 
 const Log = () => {
   const [userDetails, setuserDetails] = useState({
@@ -64,8 +62,7 @@ const Log = () => {
     e.preventDefault();
   };
   return (
-    <div className=" h-screen">
-      <Header />
+    <>
       <div className=" my-14 flex-horizontal items-center flex-wrap mx-3 lg:gap-20 xl:gap-28 md:gap-5 gap-3">
         <img
           src={imgSrc}
@@ -143,9 +140,8 @@ const Log = () => {
           </div>
         </div>
       </div>
-      <Footer />
       <ToastContainer />
-    </div>
+    </>
   );
 };
 

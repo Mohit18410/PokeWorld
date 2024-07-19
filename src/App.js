@@ -7,6 +7,8 @@ import { AppContext } from "./context/AppContext";
 import Contact from "./components/contact/Contact";
 import Log from "./components/signlog/Log";
 import Sign from "./components/signlog/Sign";
+import { Header } from "./components/Header";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const { getPokemonData } = useContext(AppContext);
@@ -16,13 +18,17 @@ function App() {
   }, []);
 
   return (
-    <Routes>
-      <Route index element={<Home />} />
-      <Route path="/explorePokeworld" element={<ExplorePokeworld />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/logIn" element={<Log />} />
-      <Route path="/signUp" element={<Sign />} />
-    </Routes>
+    <div className=" h-screen">
+      <Header />
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/explorePokeworld" element={<ExplorePokeworld />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/logIn" element={<Log />} />
+        <Route path="/signUp" element={<Sign />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 

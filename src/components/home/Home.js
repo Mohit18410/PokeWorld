@@ -9,15 +9,13 @@ import Footer from "../footer/Footer";
 
 function Home() {
   return (
-    <div className=" h-screen">
-      <Header />
+    <>
       <SiteDescription />
       <WeekPokemon />
       <Explore />
       <TopUsers />
       <SignLogin />
-      <Footer />
-    </div>
+    </>
   );
 }
 
