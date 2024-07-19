@@ -4,8 +4,6 @@ import WeekPokemon from "./WeekPokemon";
 import Explore from "./Explore";
 import TopUsers from "./TopUsers";
 import SignLogin from "./SignLogin";
-import { Header } from "../Header";
-import Footer from "../footer/Footer";
 
 function Home() {
   return (

@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import ExploreCarousel from "./ExploreCarousel";
 import { AppContext } from "../../context/AppContext";
 import Spinner from "../Spinner";
@@ -7,6 +8,8 @@ import { Button } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const Explore = () => {
+  const navigate = useNavigate();
+
   const theme = createTheme({
     palette: {
       ochre: {
@@ -32,7 +35,13 @@ const Explore = () => {
       </div>
       <div className=" flex flex-row-reverse">
         <ThemeProvider theme={theme}>
-          <Button variant="contained" color="ochre">
+          <Button
+            variant="contained"
+            color="ochre"
+            onClick={() => {
+              navigate("/explorePokeworld");
+            }}
+          >
             Extra
             <FaArrowRight />
           </Button>
